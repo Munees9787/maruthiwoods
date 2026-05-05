@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maruthi Woods - Services</title>
+<link rel="icon" href="sources/MARUTHI_LOGO.png">
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+/* RESET */
+:root {
+    --brown-dark: #3a2200;
+    --brown-mid: #7a4a10;
+    --brown-warm: #8B5E1A;
+    --brown-accent: #b06820;
+    --cream: #faf5ec;
+    --cream-light: #fdf9f2;
+    --cream-dark: #ede4d0;
+    --text-dark: #1e1208;
+    --text-mid: #4a3520;
+    --text-light: #8a7060;
+    --white: #ffffff;
+    --gold: #c4922a;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream-light);
+}
+nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+    background: rgba(250,245,236,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(122,74,16,0.12);
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 4px 24px rgba(58,34,0,0.1); }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 42px; height: 42px; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--brown-dark); line-height: 1.1; }
+  .nav-logo-sub { font-size: 10px; letter-spacing: 2px; color: var(--brown-accent); text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--text-mid); letter-spacing: 0.3px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--brown-accent); }
+  .nav-cta { background: var(--brown-dark); color: var(--cream) !important; padding: 10px 22px; border-radius: 4px; font-size: 13px !important; letter-spacing: 0.5px; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--brown-mid) !important; color: var(--white) !important; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--brown-dark); border-radius: 2px; transition: all 0.3s; }
+
+
+/* HERO */
+.hero {
+  margin-top: 50px;
+  position: relative;
+  height: 100vh;
+  background: url(sources/prods.png) center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(120, 75, 0, 0.7);
+} */
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding-bottom: 15px;
+}
+ /* ── FOOTER ── */
+  footer { background: linear-gradient(135deg, #2a1600, #4a2a08, #3a2200); padding: 64px 5% 0; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; padding-bottom: 48px; }
+  .footer-logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white); }
+  .footer-logo-sub { font-size: 10px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-top: 2px; }
+  .footer-about { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.8; margin-top: 16px; font-weight: 300; }
+  .footer-heading { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 20px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { text-decoration: none; font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.2s; font-weight: 300; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-contact-items { display: flex; flex-direction: column; gap: 14px; }
+  .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; }
+  .footer-contact-icon { font-size: 14px; margin-top: 2px; color: var(--gold); }
+  .footer-contact-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; font-weight: 300; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; text-align: center; }
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); font-weight: 300; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        inset: 72px 5% auto 5%;
+        background: linear-gradient(180deg, rgba(250,245,236,0.98), var(--cream));
+        padding: 20px;
+        gap: 14px;
+        border-radius: 12px;
+        box-shadow: 0 18px 40px rgba(58,34,0,0.12);
+        backdrop-filter: blur(8px);
+        transform: translateY(-8px);
+        opacity: 0;
+        transition: opacity 0.36s ease, transform 0.36s ease;
+        z-index: 140;
+    }
+    .nav-links.open {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* list items as soft cards */
+    .nav-links li {
+        list-style: none;
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        padding: 12px 16px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.9);
+        color: var(--text-mid);
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s;
+        box-shadow: 0 6px 18px rgba(58,34,0,0.06);
+    }
+    .nav-links a:hover {
+        background: var(--cream-light);
+        color: var(--brown-accent);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(58,34,0,0.09);
+    }
+
+    /* CTA stretches full width and stands out */
+    .nav-links .nav-cta,
+    .nav-links a.nav-cta {
+        width: 100%;
+        padding: 12px 16px;
+        background: var(--brown-dark);
+        color: var(--cream) !important;
+        border-radius: 10px;
+        box-shadow: 0 12px 30px rgba(58,34,0,0.12);
+    }
+
+    /* hamburger -> close animation */
+    .nav-toggle { z-index: 160; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* subtle stagger for menu items when opening */
+    .nav-links.open li { transform: translateY(0); opacity: 1; transition: transform 0.36s ease, opacity 0.36s ease; }
+    .nav-links li { transform: translateY(8px); opacity: 0; }
+    .nav-links.open li:nth-child(1){ transition-delay: 0.04s; }
+    .nav-links.open li:nth-child(2){ transition-delay: 0.08s; }
+    .nav-links.open li:nth-child(3){ transition-delay: 0.12s; }
+    .nav-links.open li:nth-child(4){ transition-delay: 0.16s; }
+    .nav-links { display: none; flex-direction: column; position: fixed; background: var(--cream); gap: 28px; }
+    .nav-links.open { display: flex;background-color: var(--cream); }
+    .nav-toggle { display: flex; }
+
+}
+
+</style>
+</head>
+
+<body>
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="MARUTHI_LOGO.png" alt="Maruthi Woods" srcset=""height="40" style="margin-right:8px;">
+    <div>
+      <div class="nav-logo-text">MaruthiWoods</div>
+      <div class="nav-logo-sub">Industries</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#locations">Locations</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero">
+  <!-- <div class="hero-content" data-aos="fade-up">
+    <h1 data-aos="zoom-in">Our Timber Services — Crafted for Quality</h1>
+    <p data-aos="fade-up" data-aos-delay="200">
+      At Maruthi Woods, we deliver premium timber solutions with precision and trust.
+    </p>
+  </div> -->
+</section>
+
+<!-- GALLERY -->
+<section class="section" data-aos="fade-up">
+  <h2>Our Woodwork Gallery</h2>
+  <p>Premium timber products and custom designs.</p>
+
+  <div class="gallery">
+    <div class="card" data-aos="fade-up"><img src="sources/round.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="sources/teekwood.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200"><img src="sources/malasiansize_timber.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300"><img src="sources/brezinsize_timber.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400"><img src="sources/globel_timber.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="500"><img src="sources/custom timper.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up"><img src="sources/round.jpg" loading="lazy"></div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100"><img src="sources/teekwood.jpg" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" data-aos="fade-up">
+  <h2>FAQ - Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-item active">
+      <div class="faq-question">Do you deliver timber outside India? <span>+</span></div>
+      <div class="faq-answer">
+        Yes, we export globally with all necessary certifications and standards.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I order custom sizes in bulk? <span>+</span></div>
+      <div class="faq-answer">
+        Yes, we support custom bulk orders tailored to your requirements.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Where are your branches located? <span>+</span></div>
+      <div class="faq-answer">
+        We operate across multiple regions with strong distribution networks.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I get a quote? <span>+</span></div>
+      <div class="faq-answer">
+        Contact us via phone or email for pricing and order details.
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-text">Maruthi Wood</div>
+      <div class="footer-logo-sub">Industries</div>
+      <p class="footer-about">Premium teak and timber supplier serving India and global markets since 1970. Trusted for quality, reliability, and expertise.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#locations">Locations</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <div class="footer-contact-items">
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <span class="footer-contact-text">+91 93602 94010</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <span class="footer-contact-text">Maruthiwoods@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span class="footer-contact-text">1/920, Courtallam Cross Road,<br>Piranoor, Tamil Nadu 627809</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2025 | Designed by Iunoware Pvt Ltd. All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- AOS SCRIPT -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+
+/* FAQ TOGGLE */
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    q.parentElement.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
+```
