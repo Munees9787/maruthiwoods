@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maruthi Wood Industries</title>
+<link rel="icon" href="sources/MARUTHI_LOGO.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img src="sources/MARUTHI_LOGO.png" alt="Maruthi Woods" srcset=""height="40" style="margin-right:8px;">
+    <div>
+      <div class="nav-logo-text">MaruthiWoods</div>
+      <div class="nav-logo-sub">Industries</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#locations">Locations</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-texture"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="hero-tag-dot"></span>Premium Timber Supplier</div>
+    <h1>Trusted Timber<br><span class="hero-year">Since 1970</span></h1>
+    <p class="hero-sub">Delivering premium quality teak and timber across India and global markets. Trusted by 1,200+ clients worldwide for over five decades.</p>
+    <div class="hero-btns">
+      <a href="tel:+919360294010" class="btn-primary">Get A Quote</a>
+      <a href="#about" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- <div style="width:100%;height:100%;background-color: #8B5E1A;display:flex;align-items:center;justify-content:center;"> -->
+      <img src="sources/model.png" alt="model" srcset="" style="width:80%;height:100%;">
+    </div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-badges">
+    <div class="badge-card">
+      <div class="badge-avatars">
+        <div class="badge-avatar"><img src="sources/client1.jpg" alt="client1" height="32px"></div>
+        <div class="badge-avatar"><img src="sources/client2.jpg" alt="client2" height="32px"></div>
+        <div class="badge-avatar"><img src="sources/client3.jpg" alt="client3" height="32px"></div>
+        <div class="badge-avatar">+</div>
+      </div>
+      <div class="badge-num">1,200 <span style="font-size:18px;font-family:'DM Sans'">+</span></div>
+      <div class="badge-label">Satisfied Clients Worldwide</div>
+    </div>
+    <div class="badge-card badge-guarantee">
+      <div class="badge-icon">👍</div>
+      <div class="badge-title">100% Satisfaction Guarantee</div>
+      <div class="badge-desc">Trusted Timber. Guaranteed Quality.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-images reveal">
+      <div class="about-img-wrap" style="background:linear-gradient(135deg,#d4b896,#8B5E1A);min-height:260px;display:flex;align-items:center;justify-content:center;">
+        <img src="sources/peeling.png" alt="peeling" srcset="" style="width:100%;height:auto;opacity:0.8;">
+      </div>
+      <div class="about-img-wrap" style="background:linear-gradient(135deg,#c4a882,#5a3408);min-height:260px;display:flex;align-items:center;justify-content:center;margin-top:40px;">
+        <!-- <svg viewBox="0 0 200 200" width="100" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.35">
+          <rect x="20" y="40" width="160" height="30" rx="4" fill="#fff"/>
+          <rect x="20" y="85" width="160" height="30" rx="4" fill="#fff"/>
+          <rect x="20" y="130" width="160" height="30" rx="4" fill="#fff"/>
+          <circle cx="100" cy="170" r="20" fill="#fff" opacity="0.5"/>
+        </svg> -->
+        <img src="sources/peeling2.png" alt="peeling2" srcset="" style="width:100%;height:auto;opacity:0.8;">
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">Premium Wood <span>Exporter &amp; Supplier</span></h2>
+      <ul class="about-list">
+        <li><div class="about-list-dot"></div><div class="about-list-text"><strong>Trusted Wood Exporter &amp; Supplier</strong> — Delivering premium quality timber across India &amp; global markets.</div></li>
+        <li><div class="about-list-dot"></div><div class="about-list-text"><strong>Wide Range of Timber</strong> — Hardwoods &amp; softwoods for construction, furniture, and interiors.</div></li>
+        <li><div class="about-list-dot"></div><div class="about-list-text"><strong>Sustainable &amp; Ethical Sourcing</strong> — Environmentally responsible wood solutions.</div></li>
+        <li><div class="about-list-dot"></div><div class="about-list-text"><strong>Reliable Supply Chain</strong> — On-time delivery with assured quality across decades.</div></li>
+      </ul>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <a href="about.html" class="btn-primary" style="background:var(--brown-dark);color:var(--cream);">More About Us</a>
+        <div class="contact-inline">
+          <div class="contact-inline-icon">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#fff"/></svg>
+          </div>
+          <div>
+            <div class="contact-inline-label">Contact Us</div>
+            <div class="contact-inline-number">+91 93602 94010</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stats-inner">
+    <div class="reveal"><p class="section-tag">Our Impact</p></div>
+    <div class="reveal"><h2 class="stats-title">Trusted Timber Solutions<br>Across Tamil Nadu</h2></div>
+    <div class="reveal"><p class="stats-sub">Delivering premium wood products with expertise, reliability, and a commitment to client satisfaction.</p></div>
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-number">
+  <span class="counter" data-target="50" data-format="comma">0</span>
+  <span class="stat-plus">+</span>
+</div>
+        <div class="stat-label">Years of Trusted Expertise Since 1970</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-number">
+  <span class="counter" data-target="5000" data-format="comma">0</span>
+  <span class="stat-plus">+</span>
+</div>
+        <div class="stat-label">Happy Clients Served</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-number">
+  <span class="counter" data-target="4" data-format="comma">0</span>
+  <span class="stat-plus">+</span>
+</div>
+        <div class="stat-label">Cities Covered Across Tamil Nadu</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Add data attributes to your stat numbers -->
+<!-- <div class="stat-number">
+  <span class="counter" data-target="54">0</span>
+  <span class="stat-plus">+</span>
+</div>
+
+<div class="stat-number">
+  <span class="counter" data-target="5000" data-format="comma">0</span>
+  <span class="stat-plus">+</span>
+</div>
+
+<div class="stat-number">
+  <span class="counter" data-target="4">0</span>
+</div> -->
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-header reveal">
+    <div>
+      <div class="section-tag">Our Products</div>
+      <h2 class="section-title">Explore Our Best<br><span>Timber Solutions</span></h2>
+    </div>
+    <a href="products.html" class="btn-primary" style="background:var(--brown-dark);color:var(--cream);white-space:nowrap;">All Products</a>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-img" style="background:url(sources/malasiansize_timber.jpg) no-repeat center/cover;height:240px;font-size:60px;display:flex;align-items:center;justify-content:center;"></div>
+      <div class="product-footer">
+        <div class="product-name">Custom Timber Sizing</div>
+        <div class="product-desc">Precision-cut to your specifications</div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-img" style="background:url(sources/teekwood.jpg) no-repeat center/cover;height:240px;font-size:60px;display:flex;align-items:center;justify-content:center;"></div>
+      <div class="product-footer">
+        <div class="product-name">Bulk Supply &amp; Export</div>
+        <div class="product-desc">Large-scale orders for global markets</div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-img" style="background:url(sources/brezinsize_timber.jpg) no-repeat center/cover;height:240px;font-size:60px;display:flex;align-items:center;justify-content:center;"></div>
+      <div class="product-footer">
+        <div class="product-name">Premium Teak &amp; Logs</div>
+        <div class="product-desc">Finest quality teak from verified sources</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="locations-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-tag">Our Presence</div>
+      <h2 class="section-title">Maruthiwoods Across <span>Locations</span></h2>
+      <p class="section-desc" style="margin:14px auto 0;text-align:center;">With a strong presence in four major cities, Maruthiwoods continues to deliver unmatched craftsmanship and service, closer to where you are.</p>
+    </div>
+    <div class="locations-grid">
+      <div class="location-item reveal">
+        <div class="location-skyline">
+          <img src="sources/chennai_line.png" alt="chennai_line" srcset="" style="width:100%;height:auto;">
+        </div>
+        <div class="location-name">Chennai</div>
+      </div>
+      <div class="location-item reveal reveal-delay-1">
+        <div class="location-skyline">
+          <img src="sources/sengottai.png" alt="sengottai_line" srcset="" style="width:100%;height:auto;">
+        </div>
+        <div class="location-name">Sengottai</div>
+      </div>
+      <div class="location-item reveal reveal-delay-2">
+        <div class="location-skyline">
+          <img src="sources/trichy.png" alt="trichy_line" srcset="" style="width:100%;height:auto;">
+        </div>
+        <div class="location-name">Trichy</div>
+      </div>
+      <div class="location-item reveal reveal-delay-3">
+        <div class="location-skyline">
+          <img src="sources/tuticorin.png" alt="tuticorin_line" srcset="" style="width:100%;height:100;">
+        </div>
+        <div class="location-name">Tuticorin</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-tag reveal"><div class="section-tag" style="color:var(--gold);">Client Reviews</div></div>
+    <div class="testimonials-title reveal"><h2 class="section-title" style="color:var(--white);">What People Say About<br><span>Our Services</span></h2></div>
+    <p class="section-desc reveal">Over the years, we've built lasting relationships with clients across India and around the world. Here's what some of our satisfied customers have to say.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-quote">"We've been sourcing timber from Maruthi Woods for over a decade. Their quality and consistency have always stood out. Highly recommended for bulk and custom orders."</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="sources/client1.jpg" alt="Mr. Arun Venkatesh" width="42px" height="auto" style="overflow: hidden;border-radius: 50%;"></div>
+          <div>
+            <div class="testi-name">Mr. Arun Venkatesh</div>
+            <div class="testi-role">Construction Firm, Chennai</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-quote">"I ordered teak wood for a luxury villa project in UAE. The material was premium, well-packed, and delivered on time. Truly professional service!"</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="sources/client2.jpg" alt="Ms. Anitha Rahman" width="42px" height="auto" style="overflow: hidden;border-radius: 50%;"></div>
+          <div>
+            <div class="testi-name">Ms. Anitha Rahman</div>
+            <div class="testi-role">Interior Designer, Dubai</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-quote">"Their Malaysian sizes and custom cuts saved us a lot of time in production. Their team is responsive and understands client needs perfectly."</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="sources/client3.jpg" alt="Mr. Suresh Kumar" width="42px" height="auto" style="overflow: hidden;border-radius: 50%;"></div>
+          <div>
+            <div class="testi-name">Mr. Suresh Kumar</div>
+            <div class="testi-role">Furniture Manufacturer, Trichy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-inner">
+    <div class="cta-text reveal">
+      <h2>Innovative Solutions for Your<br>Woodworking Needs</h2>
+      <p>Reach out today for custom quotes and bulk inquiries.</p>
+    </div>
+    <div class="cta-contact reveal reveal-delay-1">
+      <div class="cta-icon-wrap">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#c4922a"/></svg>
+      </div>
+      <div>
+        <div class="cta-number-label">Get Consultation</div>
+        <a href="tel:+919360294010" class="cta-number" style="text-decoration:none;color:var(--text-dark);">+91 93602 94010</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-text">Maruthi Wood</div>
+      <div class="footer-logo-sub">Industries</div>
+      <p class="footer-about">Premium teak and timber supplier serving India and global markets since 1970. Trusted for quality, reliability, and expertise.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#locations">Locations</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <div class="footer-contact-items">
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <span class="footer-contact-text">+91 93602 94010</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉️</span>
+          <span class="footer-contact-text">Maruthiwoods@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span class="footer-contact-text">1/920, Courtallam Cross Road,<br>Piranoor, Tamil Nadu 627809</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2025 | Designed by Iunoware Pvt Ltd. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile nav
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // Counter animation
+  function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const useComma = el.dataset.format === 'comma';
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const value = Math.round(easeOutQuart(progress) * target);
+    el.textContent = useComma ? value.toLocaleString() : value;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
+document.querySelectorAll('.counter').forEach(el => animateCounter(el));
+</script>
+</body>
+</html>
